@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-@Entity
 @Table(name = Admin.TABLE)
 public class Admin {
     public static final String TABLE = "admin";
@@ -42,4 +41,6 @@ public class Admin {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }

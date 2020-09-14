@@ -1,6 +1,7 @@
 package pl.coderslab.finalproject.person;
 
 import pl.coderslab.finalproject.BodyCompositionAnalysis.Measurement;
+import pl.coderslab.finalproject.additional.Additional;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -34,6 +35,9 @@ public class Person {
 
     @OneToMany (mappedBy = "person")
     private List<Measurement> measurement;
+
+    @OneToMany (mappedBy = "person")
+    private List<Additional> additional;
 
     public long getId() {
         return id;

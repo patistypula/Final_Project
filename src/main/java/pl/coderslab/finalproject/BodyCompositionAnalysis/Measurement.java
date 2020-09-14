@@ -1,8 +1,10 @@
 package pl.coderslab.finalproject.BodyCompositionAnalysis;
 
 import pl.coderslab.finalproject.person.Person;
+import pl.coderslab.finalproject.user.User;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,24 +16,34 @@ public class Measurement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotBlank
     private Double bodyFatPercentage; //%
 
+    @NotBlank
     private Double bodyWeight; //kg
 
+    @NotBlank
     private Double bodyWaterPercentage;  //%
 
+    @NotBlank
     private Double visceralFat; //level
 
+    @NotBlank
     private Double muscleMass;  //kg
 
+    @NotBlank
     private Integer bodyBuildingIndex;  //-
 
+    @NotBlank
     private Double boneMass;  //kg
 
+    @NotBlank
     private Double BMI;  //-
 
+    @NotBlank
     private Integer metabolicAge;  //-
 
+    @NotBlank
     private Integer basalMetabolicRate;  //kcal
 
     private LocalDateTime created;
@@ -40,6 +52,9 @@ public class Measurement {
 
     @ManyToOne
     private Person person;
+
+    @ManyToOne
+    private User user;
 
     @PrePersist
     public void perPersist() {
@@ -50,6 +65,23 @@ public class Measurement {
     public void perUpdate() {
         updated = LocalDateTime.now();
     }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 
     public long getId() {
         return id;
