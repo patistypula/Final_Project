@@ -4,9 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-@Table(name = Admin.TABLE)
 public class Admin {
-    public static final String TABLE = "admin";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

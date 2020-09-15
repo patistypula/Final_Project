@@ -2,10 +2,10 @@ package pl.coderslab.finalproject.person;
 
 import pl.coderslab.finalproject.BodyCompositionAnalysis.Measurement;
 import pl.coderslab.finalproject.additional.Additional;
+import pl.coderslab.finalproject.user.User;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,27 +17,29 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
     private String firstName;
 
-    @NotBlank
     private String lastName;
 
-    @NotBlank
-    private String gender;  // K or M
+    private String gender;  // F or M
 
     private Integer height; //cm
 
-    private LocalDate yearOfBirth;
-
     private Integer age;
-    //age = LocalDate.now() - yearOfBirth;
 
     @OneToMany (mappedBy = "person")
     private List<Measurement> measurement;
 
     @OneToMany (mappedBy = "person")
     private List<Additional> additional;
+
+    @OneToOne (mappedBy = "person")
+    private User user;
+
+    public Person() {
+        measurement = new ArrayList<>();
+        additional = new ArrayList<>();
+    }
 
     public long getId() {
         return id;
@@ -79,14 +81,6 @@ public class Person {
         this.height = height;
     }
 
-    public LocalDate getYearOfBirth() {
-        return yearOfBirth;
-    }
-
-    public void setYearOfBirth(LocalDate yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
-    }
-
     public Integer getAge() {
         return age;
     }
@@ -95,11 +89,39 @@ public class Person {
         this.age = age;
     }
 
-//    public List<Measurement> getMeasurement() {
-//        return measurement;
-//    }
-//
-//    public void setMeasurement(List<Measurement> measurement) {
-//        this.measurement = measurement;
+    public List<Measurement> getMeasurement() {
+        return measurement;
+    }
+
+    public void setMeasurement(List<Measurement> measurement) {
+        this.measurement = measurement;
+    }
+
+    public List<Additional> getAdditional() {
+        return additional;
+    }
+
+    public void setAdditional(List<Additional> additional) {
+        this.additional = additional;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "Person{" +
+//                "id=" + id +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", gender='" + gender + '\'' +
+//                ", height=" + height +
+//                ", age=" + age +
+//                '}';
 //    }
 }

@@ -8,4 +8,5 @@ import javax.transaction.Transactional;
 @Repository
 @Transactional
 public interface MeasurementRepository extends JpaRepository<Measurement, Long> {
+    Measurement save(Measurement entity);
 }

@@ -12,4 +12,8 @@ public class MeasurementService {
     public MeasurementService(MeasurementRepository measurementRepository) {
         this.measurementRepository = measurementRepository;
     }
+
+    public Measurement save(Measurement measurement) {
+        return measurementRepository.save(measurement);
+    }
 }

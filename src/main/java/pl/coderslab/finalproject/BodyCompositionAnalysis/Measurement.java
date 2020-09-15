@@ -16,34 +16,24 @@ public class Measurement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
     private Double bodyFatPercentage; //%
 
-    @NotBlank
     private Double bodyWeight; //kg
 
-    @NotBlank
     private Double bodyWaterPercentage;  //%
 
-    @NotBlank
     private Double visceralFat; //level
 
-    @NotBlank
     private Double muscleMass;  //kg
 
-    @NotBlank
     private Integer bodyBuildingIndex;  //-
 
-    @NotBlank
     private Double boneMass;  //kg
 
-    @NotBlank
     private Double BMI;  //-
 
-    @NotBlank
     private Integer metabolicAge;  //-
 
-    @NotBlank
     private Integer basalMetabolicRate;  //kcal
 
     private LocalDateTime created;
@@ -64,22 +54,6 @@ public class Measurement {
     @PreUpdate
     public void perUpdate() {
         updated = LocalDateTime.now();
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
 
@@ -187,16 +161,40 @@ public class Measurement {
         this.updated = updated;
     }
 
-//    public Person getPerson() {
-//        return person;
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "Measurement{" +
+//                "id=" + id +
+//                ", bodyFatPercentage=" + bodyFatPercentage +
+//                ", bodyWeight=" + bodyWeight +
+//                ", bodyWaterPercentage=" + bodyWaterPercentage +
+//                ", visceralFat=" + visceralFat +
+//                ", muscleMass=" + muscleMass +
+//                ", bodyBuildingIndex=" + bodyBuildingIndex +
+//                ", boneMass=" + boneMass +
+//                ", BMI=" + BMI +
+//                ", metabolicAge=" + metabolicAge +
+//                ", basalMetabolicRate=" + basalMetabolicRate +
+//                ", created=" + created +
+//                ", updated=" + updated +
+//                ", person=" + person +
+//                ", user=" + user +
+//                '}';
 //    }
-//
-//    public void setPerson(Person person) {
-//        this.person = person;
-//    }
-
-
-
-
-
 }

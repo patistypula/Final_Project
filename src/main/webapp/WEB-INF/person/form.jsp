@@ -1,0 +1,43 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: patis
+  Date: 15.09.2020
+  Time: 09:53
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <title>Formularz dodawania nowego pacjenta</title>
+    <style>
+        .error {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<h2>FORMULARZ DODAWANIA NOWEGO PACJENTA</h2>
+<form:form method="post" modelAttribute="persons">
+    <form:hidden path="id"/>
+    <form:errors path="firstName" cssClass="error"/><br>
+    Imię: <form:input path="firstName"/><br>
+
+    <form:errors path="lastName" cssClass="error"/><br>
+    Nazwisko: <form:input path="lastName"/><br>
+
+    <form:errors path="gender" cssClass="error"/><br>
+    Mężczyzna: <form:radiobutton path="gender" value="M"/><br>
+    Kobieta: <form:radiobutton path="gender" value="F"/><br>
+
+    <form:errors path="age" cssClass="error"/><br>
+    Wiek: <form:input path="age"/><br>
+
+    <form:errors path="height" cssClass="error"/><br>
+    Wzrost: <form:input path="height"/> w cm <br>
+
+    <input type="submit" value="Zapisz"/>
+</form:form>
+
+</body>
+</html>

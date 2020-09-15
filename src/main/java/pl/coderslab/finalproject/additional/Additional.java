@@ -16,29 +16,24 @@ public class Additional {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank
     private Double rightArmFat;
-    @NotBlank
+
     private Double rightArmMuscle;
 
-    @NotBlank
     private Double leftArmFat;
-    @NotBlank
+
     private Double leftArmMuscle;
 
-    @NotBlank
     private Double rightLegFat;
-    @NotBlank
+
     private Double rightLegMuscle;
 
-    @NotBlank
     private Double leftLegFat;
-    @NotBlank
+
     private Double leftLegMuscle;
 
-    @NotBlank
     private Double bodyFat;
-    @NotBlank
+
     private Double bodyMuscle;
 
     @ManyToOne
@@ -60,23 +55,6 @@ public class Additional {
     public void perUpdate() {
         updated = LocalDateTime.now();
     }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
 
     public long getId() {
         return id;
@@ -180,6 +158,22 @@ public class Additional {
 
     public void setUpdated(LocalDateTime updated) {
         this.updated = updated;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
