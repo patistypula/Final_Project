@@ -13,7 +13,7 @@
 </head>
 <body>
 <h2>LISTA PACJENTÓW</h2>
-<table border="1" width="50%">
+<table border="1" width="60%">
     <tr>
         <td>Imię:</td>
         <td>Nazwisko:</td>

@@ -18,37 +18,38 @@
 </head>
 <body>
 <h2>FORMULARZ DODAWANIA NOWEGO POMIARU</h2>
-<form:form method="post" modelAttribute="additional">
+<form:form method="post" modelAttribute="additionals">
     <form:hidden path="id"/>
+    <form:hidden path="person"/>
     <form:errors path="rightArmFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w prawej ręce: <form:input path="rightArmFat"/><br>
+    Procentowa zawartość tkanki tłuszczowej w prawej ręce: <form:input path="rightArmFat"/> % <br>
 
     <form:errors path="rightArmMuscle" cssClass="error"/><br>
-    Masa mięśniowa w prawej ręce: <form:input path="rightArmMuscle"/><br>
+    Masa mięśniowa w prawej ręce: <form:input path="rightArmMuscle"/> kg<br>
 
     <form:errors path="leftArmFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w lewej ręce: <form:input path="leftArmFat"/><br>
+    Procentowa zawartość tkanki tłuszczowej w lewej ręce: <form:input path="leftArmFat"/> %<br>
 
     <form:errors path="leftArmMuscle" cssClass="error"/><br>
-    Masa mięśniowa w lewej ręce: <form:input path="leftArmMuscle"/><br>
+    Masa mięśniowa w lewej ręce: <form:input path="leftArmMuscle"/> kg <br>
 
     <form:errors path="rightLegFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w prawej nodze: <form:input path="rightLegFat"/><br>
+    Procentowa zawartość tkanki tłuszczowej w prawej nodze: <form:input path="rightLegFat"/> %<br>
 
     <form:errors path="rightLegMuscle" cssClass="error"/><br>
-    Masa mięśniowa w prawej nodze: <form:input path="rightLegMuscle"/><br>
+    Masa mięśniowa w prawej nodze: <form:input path="rightLegMuscle"/> kg <br>
 
     <form:errors path="leftLegFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w lewej nodze: <form:input path="leftLegFat"/><br>
+    Procentowa zawartość tkanki tłuszczowej w lewej nodze: <form:input path="leftLegFat"/> %<br>
 
     <form:errors path="leftLegMuscle" cssClass="error"/><br>
-    Masa mięśniowa w lewej nodze: <form:input path="leftLegMuscle"/><br>
+    Masa mięśniowa w lewej nodze: <form:input path="leftLegMuscle"/> kg<br>
 
     <form:errors path="bodyFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w korpusie: <form:input path="bodyFat"/><br>
+    Procentowa zawartość tkanki tłuszczowej w korpusie: <form:input path="bodyFat"/> %<br>
 
     <form:errors path="bodyMuscle" cssClass="error"/><br>
-    Masa mięśniowa w korpusie: <form:input path="bodyMuscle"/><br>
+    Masa mięśniowa w korpusie: <form:input path="bodyMuscle"/> kg<br>
 
     <input type="submit" value="Zapisz"/>
 </form:form>

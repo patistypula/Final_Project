@@ -194,7 +194,6 @@ public class Measurement {
 //                ", created=" + created +
 //                ", updated=" + updated +
 //                ", person=" + person +
-//                ", user=" + user +
 //                '}';
 //    }
 }

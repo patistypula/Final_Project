@@ -113,15 +113,15 @@ public class Person {
         this.user = user;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Person{" +
-//                "id=" + id +
-//                ", firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", gender='" + gender + '\'' +
-//                ", height=" + height +
-//                ", age=" + age +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", height=" + height +
+                ", age=" + age +
+                '}';
+    }
 }

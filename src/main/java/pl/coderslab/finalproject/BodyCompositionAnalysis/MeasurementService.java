@@ -1,8 +1,10 @@
 package pl.coderslab.finalproject.BodyCompositionAnalysis;
 
 import org.springframework.stereotype.Service;
+import pl.coderslab.finalproject.person.Person;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @Transactional
@@ -15,5 +17,9 @@ public class MeasurementService {
 
     public Measurement save(Measurement measurement) {
         return measurementRepository.save(measurement);
+    }
+
+    public List<Measurement> selectByCreated(Person person) {
+        return measurementRepository.selectByCreated(person);
     }
 }

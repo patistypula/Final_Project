@@ -40,7 +40,7 @@ public class PersonController {
             return "person/form";
         }
         personService.save(person);
-        return "person/all";
+        return "redirect:/personDetails/all";
     }
 
     @RequestMapping("/all")
@@ -69,7 +69,7 @@ public class PersonController {
             return "person/form";
         }
         personService.save(person);
-        return "person/all";
+        return "redirect:/personDetails/all";
     }
 
 
