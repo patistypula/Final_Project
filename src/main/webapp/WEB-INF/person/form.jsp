@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-<h2>FORMULARZ DODAWANIA NOWEGO PACJENTA</h2>
+<h2><center>FORMULARZ DODAWANIA NOWEGO PACJENTA</center></h2>
 <form:form method="post" modelAttribute="persons">
     <form:hidden path="id"/>
     <form:errors path="firstName" cssClass="error"/><br>
@@ -31,11 +31,11 @@
     Kobieta: <form:radiobutton path="gender" value="F"/><br>
 
     <form:errors path="age" cssClass="error"/><br>
-    Wiek: <form:input path="age"/><br>
+    Wiek: <form:input path="age"/> lat/a<br>
 
     <form:errors path="height" cssClass="error"/><br>
-    Wzrost: <form:input path="height"/> w cm <br>
-
+    Wzrost: <form:input path="height"/> cm <br>
+    <br>
     <input type="submit" value="Zapisz"/>
 </form:form>
 

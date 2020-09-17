@@ -48,7 +48,7 @@ public class AdditionalController {
         return "redirect:/personDetails/all";
     }
 
-    @RequestMapping("/history/{id}")
+    @RequestMapping("/history/{id}")  // tu jest od uzytkownika
     public String getAll(Model model, @PathVariable long id) {
         Optional<Person> person = personService.findById(id);
         Additional additional = new Additional();
@@ -56,4 +56,21 @@ public class AdditionalController {
         model.addAttribute("additionals", additionalService.selectByCreated(person.get()));
         return "additional/all";
     }
+
+    @GetMapping("/edit/{id}")  // tu jest id pomiaru
+    public String editAdditio(@PathVariable long id, Model model) {
+        Additional additional = additionalService.findById(id);
+        model.addAttribute("additionals", additional);
+        return "additional/form";
+    }
+
+    @PostMapping("/edit/{id}")   // tu jest id pomiaru
+    public String saveEditedAddition(@PathVariable long id, @Valid Additional additional, BindingResult result) {
+        if(result.hasErrors()) {
+            return "additional/form";
+        }
+        additionalService.save(additional);
+        return "redirect:/additional/history/"+additional.getPerson().getId();
+    }
+
 }

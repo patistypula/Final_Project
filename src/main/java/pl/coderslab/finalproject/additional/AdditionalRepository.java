@@ -15,4 +15,6 @@ public interface AdditionalRepository extends JpaRepository<Additional, Long> {
 
     @Query("SELECT a FROM Additional a WHERE a.person=?1 ORDER BY a.created asc")
     List<Additional> selectByCreated(Person person);
+
+    Additional findById(long id);
 }

@@ -15,4 +15,6 @@ public interface MeasurementRepository extends JpaRepository<Measurement, Long> 
 
     @Query("SELECT m FROM Measurement m WHERE m.person=?1 ORDER BY m.created asc")
     List<Measurement> selectByCreated(Person person);
+
+    Measurement findById(long id);
 }

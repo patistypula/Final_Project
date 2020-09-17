@@ -12,7 +12,7 @@
     <title>Lista pacjentów</title>
 </head>
 <body>
-<h2>LISTA PACJENTÓW</h2>
+<h2><center>LISTA PACJENTÓW</center></h2>
 <table border="1" width="60%">
     <tr>
         <td>Imię:</td>
@@ -29,9 +29,9 @@
         <tr>
             <td>${person.firstName}</td>
             <td>${person.lastName}</td>
-            <td>${person.gender}</td>
-            <td>${person.age}</td>
-            <td>${person.height}</td>
+            <td><center>${person.gender}</center></td>
+            <td><center>${person.age}</center></td>
+            <td><center>${person.height}</center></td>
             <td>
                 <a href="/measurement/add/${person.id}">Dodaj</a>
             </td>

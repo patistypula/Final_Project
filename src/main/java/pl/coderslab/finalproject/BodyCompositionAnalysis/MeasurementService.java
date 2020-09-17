@@ -22,4 +22,8 @@ public class MeasurementService {
     public List<Measurement> selectByCreated(Person person) {
         return measurementRepository.selectByCreated(person);
     }
+
+    public Measurement findById(long id) {
+        return measurementRepository.findById(id);
+    }
 }

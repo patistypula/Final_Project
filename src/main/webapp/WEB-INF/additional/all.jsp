@@ -12,35 +12,42 @@
     <title>Historia pomiarów</title>
 </head>
 <body>
-<h2>HISTORIA POMIARÓW</h2>
+<h2><center>HISTORIA POMIARÓW</center></h2>
+RH - Right Hand <br>
+LH - Left Hand <br>
+RL - Right Leg <br>
+LL - Left Leg <br>
+<br>
 <table border="1" width="100%">
     <tr>
         <td>Data</td>
-        <td>Prawa ręka, %fat</td>
-        <td>Prawa ręka, masa mięśniowa [kg]</td>
-        <td>Lewa ręka, %fat</td>
-        <td>Lewa ręka, masa mięśniowa [kg]</td>
-        <td>Prawa noga, %fat</td>
-        <td>Prawa noga, masa mięśniowa [kg]</td>
-        <td>Lewa noga, %fat</td>
-        <td>Lewa noga, masa mięśniowa [kg]</td>
-        <td>Korpus, %fat</td>
-        <td>Korpus, masa mięśniowa [kg]</td>
+        <td>Data modyfikacji</td>
+        <td>RH %fat</td>
+        <td>RH [kg]</td>
+        <td>LH %fat</td>
+        <td>LH [kg]</td>
+        <td>RL %fat</td>
+        <td>RL [kg]</td>
+        <td>LL %fat</td>
+        <td>LL [kg]</td>
+        <td>Body %fat</td>
+        <td>Body [kg]</td>
         <td></td>
     </tr>
     <c:forEach items="${additionals}" var="additional">
         <tr>
             <td>${additional.created}</td>
-            <td>${additional.rightArmFat}</td>
-            <td>${additional.rightArmMuscle}</td>
-            <td>${additional.leftArmFat}</td>
-            <td>${additional.leftArmMuscle}</td>
-            <td>${additional.rightLegFat}</td>
-            <td>${additional.rightLegMuscle}</td>
-            <td>${additional.leftLegFat}</td>
-            <td>${additional.leftLegMuscle}</td>
-            <td>${additional.bodyFat}</td>
-            <td>${additional.bodyMuscle}</td>
+            <td>${additional.updated}</td>
+            <td><center>${additional.rightArmFat}</center></td>
+            <td><center>${additional.rightArmMuscle}</center></td>
+            <td><center>${additional.leftArmFat}</center></td>
+            <td><center>${additional.leftArmMuscle}</center></td>
+            <td><center>${additional.rightLegFat}</center></td>
+            <td><center>${additional.rightLegMuscle}</center></td>
+            <td><center>${additional.leftLegFat}</center></td>
+            <td><center>${additional.leftLegMuscle}</center></td>
+            <td><center>${additional.bodyFat}</center></td>
+            <td><center>${additional.bodyMuscle}</center></td>
             <td>
                 <a href="/additional/edit/${additional.id}">Edytuj</a>
             </td>

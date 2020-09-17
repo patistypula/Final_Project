@@ -7,15 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Historia pomiarów</title>
 </head>
 <body>
-<h2>HISTORIA POMIARÓW</h2>
+<h2><center>HISTORIA POMIARÓW</center></h2>
 <table border="1" width="100%">
     <tr>
         <td>Data</td>
+        <td>Data modyfikacji</td>
         <td>Procentowa zawartość tkanki tłuszczowej, %</td>
         <td>Masa ciała, kg</td>
         <td>Procentowa zawartość wody w organiźmie, %</td>
@@ -30,17 +33,18 @@
     </tr>
     <c:forEach items="${measurements}" var="measurement">
         <tr>
-            <td>${measurement.created}</td>
-            <td>${measurement.bodyFatPercentage}</td>
-            <td>${measurement.bodyWeight}</td>
-            <td>${measurement.bodyWaterPercentage}</td>
-            <td>${measurement.visceralFat}</td>
-            <td>${measurement.muscleMass}</td>
-            <td>${measurement.bodyBuildingIndex}</td>
-            <td>${measurement.boneMass}</td>
-            <td>${measurement.BMI}</td>
-            <td>${measurement.metabolicAge}</td>
-            <td>${measurement.basalMetabolicRate}</td>
+            <td><center>${measurement.created}</center></td>
+            <td><center>${measurement.updated}</center></td>
+            <td><center>${measurement.bodyFatPercentage}</center></td>
+            <td><center>${measurement.bodyWeight}</center></td>
+            <td><center>${measurement.bodyWaterPercentage}</center></td>
+            <td><center>${measurement.visceralFat}</center></td>
+            <td><center>${measurement.muscleMass}</center></td>
+            <td><center>${measurement.bodyBuildingIndex}</center></td>
+            <td><center>${measurement.boneMass}</center></td>
+            <td><center>${measurement.BMI}</center></td>
+            <td><center>${measurement.metabolicAge}</center></td>
+            <td><center>${measurement.basalMetabolicRate}</center></td>
             <td>
                 <a href="/measurement/edit/${measurement.id}">Edytuj</a>
             </td>

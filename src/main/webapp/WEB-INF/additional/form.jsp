@@ -17,40 +17,41 @@
     </style>
 </head>
 <body>
-<h2>FORMULARZ DODAWANIA NOWEGO POMIARU</h2>
+<h2><center>FORMULARZ DODAWANIA NOWEGO POMIARU</center></h2>
+RH - Right Hand<br>
+LH - Left Hand<br>
+RL - Right Leg<br>
+LL - Left Leg<br>
+<br>
 <form:form method="post" modelAttribute="additionals">
     <form:hidden path="id"/>
     <form:hidden path="person"/>
-    <form:errors path="rightArmFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w prawej ręce: <form:input path="rightArmFat"/> % <br>
-
-    <form:errors path="rightArmMuscle" cssClass="error"/><br>
-    Masa mięśniowa w prawej ręce: <form:input path="rightArmMuscle"/> kg<br>
-
-    <form:errors path="leftArmFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w lewej ręce: <form:input path="leftArmFat"/> %<br>
-
-    <form:errors path="leftArmMuscle" cssClass="error"/><br>
-    Masa mięśniowa w lewej ręce: <form:input path="leftArmMuscle"/> kg <br>
-
-    <form:errors path="rightLegFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w prawej nodze: <form:input path="rightLegFat"/> %<br>
-
-    <form:errors path="rightLegMuscle" cssClass="error"/><br>
-    Masa mięśniowa w prawej nodze: <form:input path="rightLegMuscle"/> kg <br>
-
-    <form:errors path="leftLegFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w lewej nodze: <form:input path="leftLegFat"/> %<br>
-
-    <form:errors path="leftLegMuscle" cssClass="error"/><br>
-    Masa mięśniowa w lewej nodze: <form:input path="leftLegMuscle"/> kg<br>
-
-    <form:errors path="bodyFat" cssClass="error"/><br>
-    Procentowa zawartość tkanki tłuszczowej w korpusie: <form:input path="bodyFat"/> %<br>
-
-    <form:errors path="bodyMuscle" cssClass="error"/><br>
-    Masa mięśniowa w korpusie: <form:input path="bodyMuscle"/> kg<br>
-
+<table border="1" width="50%">
+    <tr>
+        <td></td>
+        <td><center>RH</center></td>
+        <td><center>LH</center></td>
+        <td><center>RL</center></td>
+        <td><center>LL</center></td>
+        <td><center>BODY</center></td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td><form:input path="rightArmFat"/></td>
+        <td><form:input path="leftArmFat"/></td>
+        <td><form:input path="rightLegFat"/></td>
+        <td><form:input path="leftLegFat"/></td>
+        <td><form:input path="bodyFat"/></td>
+    </tr>
+    <tr>
+        <td>kg</td>
+        <td><form:input path="rightArmMuscle"/></td>
+        <td><form:input path="leftArmMuscle"/></td>
+        <td><form:input path="rightLegMuscle"/></td>
+        <td><form:input path="leftLegMuscle"/></td>
+        <td><form:input path="bodyMuscle"/></td>
+    </tr>
+</table><br>
     <input type="submit" value="Zapisz"/>
 </form:form>
 

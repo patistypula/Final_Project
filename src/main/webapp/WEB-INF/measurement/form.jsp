@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-<h2>DODAWANIE NOWEGO POMIARU</h2>
+<h2><center>DODAWANIE NOWEGO POMIARU</center></h2>
 
 <form:form method="post" modelAttribute="measurements">
     <form:hidden path="id"/>
@@ -51,7 +51,7 @@
 
     <form:errors path="basalMetabolicRate" cssClass="error"/><br>
     Podstawowa przemiana materii: <form:input path="basalMetabolicRate"/> kcal <br>
-
+    <br>
     <input type="submit" value="Zapisz"/>
 </form:form>
 

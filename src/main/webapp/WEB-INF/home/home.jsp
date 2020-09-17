@@ -12,10 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Witamy na stronie głównej!</h2>
+<h2><center>Witamy na stronie głównej!</center></h2>
 <p>Oto linki do poszczególnych stron: </p>
 <a href="/personDetails/add">Dodawanie nowych pacjentów</a><br>
 <a href="/personDetails/all">Lista wszystkich pacjentów</a><br>
-<%--<spring:message code="homepage.welcome"/>--%>
 </body>
 </html>

@@ -22,4 +22,8 @@ public class AdditionalService {
     public List<Additional> selectByCreated (Person person) {
         return additionalRepository.selectByCreated(person);
     }
+
+    public Additional findById(long id) {
+        return additionalRepository.findById(id);
+    }
 }
