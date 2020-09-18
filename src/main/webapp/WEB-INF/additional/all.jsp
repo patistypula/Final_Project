@@ -55,5 +55,8 @@ LL - Left Leg <br>
     </c:forEach>
 </table>
 
+<br>
+<a href="/personDetails/all">Lista pacjentów</a>
+
 </body>
 </html>

@@ -1,10 +1,8 @@
 package pl.coderslab.finalproject.BodyCompositionAnalysis;
 
 import pl.coderslab.finalproject.person.Person;
-import pl.coderslab.finalproject.user.User;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Entity
@@ -42,9 +40,6 @@ public class Measurement {
 
     @ManyToOne
     private Person person;
-
-    @ManyToOne
-    private User user;
 
     @PrePersist
     public void perPersist() {
@@ -167,14 +162,6 @@ public class Measurement {
 
     public void setPerson(Person person) {
         this.person = person;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
 //    @Override

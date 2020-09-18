@@ -30,14 +30,16 @@
     Mężczyzna: <form:radiobutton path="gender" value="M"/><br>
     Kobieta: <form:radiobutton path="gender" value="F"/><br>
 
-    <form:errors path="age" cssClass="error"/><br>
-    Wiek: <form:input path="age"/> lat/a<br>
+    <form:errors path="yearOfBirth" cssClass="error"/><br>
+    Data urodzenia: <form:input path="yearOfBirth"/><br>
 
     <form:errors path="height" cssClass="error"/><br>
     Wzrost: <form:input path="height"/> cm <br>
     <br>
     <input type="submit" value="Zapisz"/>
 </form:form>
+<br>
+<a href="/personDetails/all">Lista pacjentów</a>
 
 </body>
 </html>

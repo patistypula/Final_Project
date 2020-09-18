@@ -1,10 +1,8 @@
 package pl.coderslab.finalproject.additional;
 
 import pl.coderslab.finalproject.person.Person;
-import pl.coderslab.finalproject.user.User;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Entity
@@ -38,9 +36,6 @@ public class Additional {
 
     @ManyToOne
     private Person person;
-
-    @ManyToOne
-    private User user;
 
     private LocalDateTime created;
 
@@ -166,14 +161,6 @@ public class Additional {
 
     public void setPerson(Person person) {
         this.person = person;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface PersonRepository extends JpaRepository<Person, Long> {
     Person save(Person entity);
 
-    @Query("SELECT p FROM Person p ORDER BY p.lastName asc")
+    @Query(value = "SELECT p FROM Person p where p.id > 1 ORDER BY p.lastName asc")
     List<Person> selectByLastName();
 
     Optional<Person> findById(Long id);

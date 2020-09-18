@@ -52,5 +52,8 @@
     </c:forEach>
 </table>
 
+<br>
+<a href="/personDetails/all">Lista pacjentów</a>
+
 </body>
 </html>

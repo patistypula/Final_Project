@@ -13,7 +13,7 @@
 </head>
 <body>
 <h2><center>LISTA PACJENTÓW</center></h2>
-<table border="1" width="60%">
+<table border="1" width="100%">
     <tr>
         <td>Imię:</td>
         <td>Nazwisko:</td>
@@ -23,14 +23,16 @@
         <td>Pomiary podstawowe:</td>
         <td>Pomiary dodatkowe:</td>
         <td>Historia pomiarów:</td>
+        <td>Plan diety:</td>
+        <td>Plan ćwiczeń:</td>
         <td></td>
     </tr>
-    <c:forEach items="${persons}" var="person">
+    <c:forEach items="${persons}" var="person" varStatus="myIndex">
         <tr>
             <td>${person.firstName}</td>
             <td>${person.lastName}</td>
             <td><center>${person.gender}</center></td>
-            <td><center>${person.age}</center></td>
+            <td><center>${ages[myIndex.index]}</center></td>
             <td><center>${person.height}</center></td>
             <td>
                 <a href="/measurement/add/${person.id}">Dodaj</a>
@@ -43,12 +45,18 @@
                 <a href="/additional/history/${person.id}">Dodatkowy</a>
             </td>
             <td>
+                <a href="/diet/add/${person.id}">Dodaj</a>
+                <a href="/diet/history/${person.id}">Szczegóły</a>
+            </td>
+            <td>
+                <a href="/exercise/add/${person.id}">Dodaj</a>
+                <a href="/exercise/history/${person.id}">Szczegóły</a>
+            </td>
+            <td>
                 <a href="/personDetails/edit/${person.id}">Edytuj</a>
             </td>
         </tr>
     </c:forEach>
 </table>
-
-
 </body>
 </html>

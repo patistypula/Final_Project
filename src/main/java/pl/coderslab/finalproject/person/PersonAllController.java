@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Validator;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -26,7 +28,14 @@ public class PersonAllController {
 
     @RequestMapping("/all")
     public String getAllPerson(Model model) {
-        model.addAttribute("persons", personService.selectByLastName());
+        List<Person> persons = personService.selectByLastName();
+        model.addAttribute("persons", persons);
+        LocalDate now = LocalDate.now();
+        List<Integer> ages = new ArrayList<>();
+        for(int i=0;   i<persons.size();   i++){
+            ages.add(now.getYear()-persons.get(i).getYearOfBirth().getYear());
+        }
+        model.addAttribute("ages", ages);
         return "person/all";
     }
 

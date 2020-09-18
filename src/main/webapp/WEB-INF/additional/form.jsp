@@ -55,5 +55,8 @@ LL - Left Leg<br>
     <input type="submit" value="Zapisz"/>
 </form:form>
 
+<br>
+<a href="/personDetails/all">Lista pacjentów</a>
+
 </body>
 </html>
