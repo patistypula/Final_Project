@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Formularz dodawania nowego planu diety</title>
@@ -18,10 +19,31 @@
 <body>
 <h2><center>DODAWANIE NOWEGO PLANU DIETY</center></h2>
 <table border="1" width="100%">
-
-
-
-
+    <form:form method="post" modelAttribute="diets">
+        <form:hidden path="id"/>
+        <form:hidden path="person"/>
+        <table border="1" width="100%">
+            <tr>
+                <td><center>PONIEDZIAŁEK</center></td>
+                <td><center>WTOREK</center></td>
+                <td><center>ŚRODA</center></td>
+                <td><center>CZWARTEK</center></td>
+                <td><center>PIĄTEK</center></td>
+                <td><center>SOBOTA</center></td>
+                <td><center>NIEDZIELA</center></td>
+            </tr>
+            <tr>
+                <td><form:textarea rows="6" cols="24" path="monday"/></td>
+                <td><form:textarea rows="6" cols="24" path="tuesday"/></td>
+                <td><form:textarea rows="6" cols="24" path="wednesday"/></td>
+                <td><form:textarea rows="6" cols="24" path="thursday"/></td>
+                <td><form:textarea rows="6" cols="24" path="friday"/></td>
+                <td><form:textarea rows="6" cols="24" path="saturday"/></td>
+                <td><form:textarea rows="6" cols="24" path="sunday"/></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Zapisz"/>
+    </form:form>
 
 </table>
 

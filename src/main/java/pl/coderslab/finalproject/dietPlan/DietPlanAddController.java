@@ -36,7 +36,7 @@ public class DietPlanAddController {
         Optional<Person> person = personService.findById(id);
         DietPlan dietPlan = new DietPlan();
         dietPlan.setPerson(person.get());
-        model.addAttribute("dietPlans", dietPlan);
+        model.addAttribute("diets", dietPlan);
         return "dietPlan/form";
     }
 
