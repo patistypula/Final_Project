@@ -18,6 +18,7 @@
 </head>
 <body>
 <h2><center>FORMULARZ DODAWANIA NOWEGO PACJENTA</center></h2>
+<left><a href="/personDetails/all">Lista pacjentów</a></left>
 <form:form method="post" modelAttribute="persons">
     <form:hidden path="id"/>
     <form:errors path="firstName" cssClass="error"/><br>
@@ -39,7 +40,7 @@
     <input type="submit" value="Zapisz"/>
 </form:form>
 <br>
-<a href="/personDetails/all">Lista pacjentów</a>
+
 
 </body>
 </html>

@@ -11,8 +11,19 @@
 <head>
     <title>Historia planów treningowych</title>
     <style>
-        .error {
-            color:red;
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
         }
     </style>
 </head>

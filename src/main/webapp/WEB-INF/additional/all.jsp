@@ -10,6 +10,22 @@
 <html>
 <head>
     <title>Historia pomiarów</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
@@ -22,16 +38,31 @@ LL - Left Leg <br>
     <tr>
         <td>Data</td>
         <td>Data modyfikacji</td>
-        <td>RH %fat</td>
-        <td>RH [kg]</td>
-        <td>LH %fat</td>
-        <td>LH [kg]</td>
-        <td>RL %fat</td>
-        <td>RL [kg]</td>
-        <td>LL %fat</td>
-        <td>LL [kg]</td>
-        <td>Body %fat</td>
-        <td>Body [kg]</td>
+        <td><center>RH</center></td>
+        <td><center>RH</center></td>
+        <td><center>LH</center></td>
+        <td><center>LH</center></td>
+        <td><center>RL</center></td>
+        <td><center>RL</center></td>
+        <td><center>LL</center></td>
+        <td><center>LL</center></td>
+        <td><center>BODY</center></td>
+        <td><center>BODY</center></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><center>%fat</center></td>
+        <td><center>kg</center></td>
+        <td><center>%fat</center></td>
+        <td><center>kg</center></td>
+        <td><center>%fat</center></td>
+        <td><center>kg</center></td>
+        <td><center>%fat</center></td>
+        <td><center>kg</center></td>
+        <td><center>%fat</center></td>
+        <td><center>kg</center></td>
         <td></td>
     </tr>
     <c:forEach items="${additionals}" var="additional">

@@ -44,6 +44,6 @@ public class DietPlanEditController {
             return "dietPlan/form";
         }
         dietPlanService.save(dietPlan);
-        return "redirect:/diet/history/"+dietPlan.getPerson().getId();
+        return "redirect:/diet/history/" +dietPlan.getPerson().getId();
     }
 }

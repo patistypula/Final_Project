@@ -10,6 +10,22 @@
 <html>
 <head>
     <title>Lista pacjentów</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
 <h2><center>LISTA PACJENTÓW</center></h2>
@@ -58,5 +74,8 @@
         </tr>
     </c:forEach>
 </table>
+
+<br>
+<a href="/personDetails/add">Dodawanie nowego pacjenta</a>
 </body>
 </html>

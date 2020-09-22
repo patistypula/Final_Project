@@ -26,6 +26,4 @@ public class DietPlanService {
     public DietPlan findById(long id) {
         return dietPlanRepository.findById(id);
     }
-
-
 }

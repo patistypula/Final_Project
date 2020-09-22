@@ -12,6 +12,22 @@
 <html>
 <head>
     <title>Historia pomiarów</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
@@ -19,16 +35,31 @@
     <tr>
         <td>Data</td>
         <td>Data modyfikacji</td>
-        <td>Procentowa zawartość tkanki tłuszczowej, %</td>
-        <td>Masa ciała, kg</td>
-        <td>Procentowa zawartość wody w organiźmie, %</td>
-        <td>Poziom tkanki tłuszczowej wisceralnej, level</td>
-        <td>Masa mięśniowa, kg</td>
+        <td>Procentowa zawartość tkanki tłuszczowej</td>
+        <td>Masa ciała</td>
+        <td>Procentowa zawartość wody w organiźmie</td>
+        <td>Poziom tkanki tłuszczowej wisceralnej</td>
+        <td>Masa mięśniowa</td>
         <td>Wskaźnik budowy ciała</td>
-        <td>Poziom mineralny kości, kg</td>
+        <td>Poziom mineralny kości</td>
         <td>BMI</td>
-        <td>Wiek metaboliczny, lat/a</td>
-        <td>Podstawowa przemiana materii, kcal</td>
+        <td>Wiek metaboliczny</td>
+        <td>Podstawowa przemiana materii</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> </td>
+        <td><center>%</center></td>
+        <td><center>kg</center></td>
+        <td><center>%</center></td>
+        <td><center>level</center></td>
+        <td><center>kg</center></td>
+        <td><center>-</center></td>
+        <td><center>kg</center></td>
+        <td><center>-</center></td>
+        <td><center>lat/a</center></td>
+        <td><center>kcal</center></td>
         <td></td>
     </tr>
     <c:forEach items="${measurements}" var="measurement">

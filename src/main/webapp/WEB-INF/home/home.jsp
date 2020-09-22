@@ -12,9 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-<h2><center>Witamy na stronie głównej!</center></h2>
-<p>Oto linki do poszczególnych stron: </p>
-<a href="/personDetails/add">Dodawanie nowych pacjentów</a><br>
-<a href="/personDetails/all">Lista wszystkich pacjentów</a><br>
+<h1><center>Witamy na stronie głównej!</center></h1>
+<h2><center>Oto linki do poszczególnych stron:</center> </h2>
+<h3><center><a href="/personDetails/add">Dodawanie nowych pacjentów</a></center></h3>
+<h3><center><a href="/personDetails/all">Lista wszystkich pacjentów</a></center></h3>
 </body>
 </html>

@@ -42,6 +42,6 @@ public class MeasureEditController {
             return "measurement/form";
         }
         measurementService.save(measurement);
-        return "redirect:/measurement/history/"+measurement.getPerson().getId();
+        return "redirect:/measurement/history/" +measurement.getPerson().getId();
     }
 }

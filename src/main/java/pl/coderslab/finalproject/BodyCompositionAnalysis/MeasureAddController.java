@@ -47,5 +47,4 @@ public class MeasureAddController {
         measurementService.save(measurement);
         return "redirect:/personDetails/all";
     }
-
 }

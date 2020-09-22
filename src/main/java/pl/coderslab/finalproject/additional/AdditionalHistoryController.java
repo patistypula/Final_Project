@@ -38,5 +38,4 @@ public class AdditionalHistoryController {
         model.addAttribute("additionals", additionalService.selectByCreated(person.get()));
         return "additional/all";
     }
-
 }

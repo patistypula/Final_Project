@@ -42,6 +42,6 @@ public class AdditionalEditController {
             return "additional/form";
         }
         additionalService.save(additional);
-        return "redirect:/additional/history/"+additional.getPerson().getId();
+        return "redirect:/additional/history/" + additional.getPerson().getId();
     }
 }

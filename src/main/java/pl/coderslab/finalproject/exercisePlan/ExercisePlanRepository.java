@@ -13,7 +13,7 @@ import java.util.List;
 public interface ExercisePlanRepository extends JpaRepository<ExercisePlan, Long> {
     ExercisePlan save(ExercisePlan entity);
 
-    @Query("SELECT e FROM ExercisePlan e WHERE e.person=?1 ORDER BY e.created asc")
+    @Query("SELECT e FROM ExercisePlan e WHERE e.person= ?1 ORDER BY e.created asc")
     List<ExercisePlan> selectByCreated(Person person);
 
     ExercisePlan findById(long id);
