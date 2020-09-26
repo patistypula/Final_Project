@@ -26,4 +26,8 @@ public class PersonService {
     public Optional<Person> findById(long id) {
         return personRepository.findById(id);
     }
+
+    public List<Person> selectByRegex(String lastName){
+        return personRepository.selectByRegex(lastName);
+    }
 }

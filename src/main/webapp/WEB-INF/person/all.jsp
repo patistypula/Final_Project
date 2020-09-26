@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Lista pacjentów</title>
@@ -29,6 +30,19 @@
 </head>
 <body>
 <h2><center>LISTA PACJENTÓW</center></h2>
+
+<div class="d-flex justify-content-right mb-3">
+    <p>Wyszukiwarka pacjentów: </p>
+    <form method="get" action="/personDetails/search">
+        <label>
+            <input type="text" name="lastName" placeholder="Wpisz nazwisko pacjenta"/>
+        </label>
+        <label>
+            <button type="submit">Szukaj</button>
+        </label>
+    </form>
+</div>
+<br>
 <table border="1" width="100%">
     <tr>
         <td>Imię:</td>

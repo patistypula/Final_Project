@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.Validator;
-import java.util.List;
 
 @Controller
 @RequestMapping("/personDetails")
@@ -20,12 +19,6 @@ public class PersonAddController {
         this.validator = validator;
     }
 
-    @ModelAttribute("persons")
-    public List<Person> getAllUsers() {
-        return personService.selectByLastName();
-    }
-
-
     @GetMapping("/add")
     public String addPerson(Model model){
         model.addAttribute("persons", new Person());
@@ -33,12 +26,11 @@ public class PersonAddController {
     }
 
     @PostMapping("/add")
-    public String savePerson(@Valid Person person, BindingResult result) {
+    public String savePerson(@Valid @ModelAttribute ("persons") Person person, BindingResult result) {
         if(result.hasErrors()) {
             return "person/form";
         }
         personService.save(person);
         return "redirect:/personDetails/all";
     }
-
 }

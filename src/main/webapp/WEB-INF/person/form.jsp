@@ -40,7 +40,5 @@
     <input type="submit" value="Zapisz"/>
 </form:form>
 <br>
-
-
 </body>
 </html>

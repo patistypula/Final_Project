@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.Validator;
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -21,11 +20,6 @@ public class PersonEditController {
         this.validator = validator;
     }
 
-    @ModelAttribute("persons")
-    public List<Person> getAllUsers() {
-        return personService.selectByLastName();
-    }
-
     @GetMapping("/edit/{id}")
     public String editPerson (@PathVariable long id, Model model) {
         Optional<Person> person = personService.findById(id);
@@ -37,7 +31,8 @@ public class PersonEditController {
     }
 
     @PostMapping("/edit/{id}")
-    public String saveEditPerson (@PathVariable long id, @Valid Person person, BindingResult result) {
+    public String saveEditPerson (@PathVariable long id, @Valid @ModelAttribute("persons")
+            Person person, BindingResult result) {
         if(id != person.getId()) {
             return "home/error";
         }
