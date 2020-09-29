@@ -31,6 +31,8 @@
 </head>
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
+<a href="/personDetails/all">Lista pacjentów</a><br>
+<br>
 <table border="1" width="100%">
     <tr>
         <td>Data</td>
@@ -82,9 +84,5 @@
         </tr>
     </c:forEach>
 </table>
-
-<br>
-<a href="/personDetails/all">Lista pacjentów</a>
-
 </body>
 </html>

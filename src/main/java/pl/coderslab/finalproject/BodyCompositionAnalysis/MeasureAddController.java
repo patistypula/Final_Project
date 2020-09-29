@@ -40,7 +40,8 @@ public class MeasureAddController {
     }
 
     @PostMapping("/add/{id}")
-    public String saveMeasure(@Valid Measurement measurement, BindingResult result) {
+    public String saveMeasure(@Valid @ModelAttribute("measurements") Measurement measurement,
+                              BindingResult result) {
         if(result.hasErrors()) {
             return "measurement/form";
         }

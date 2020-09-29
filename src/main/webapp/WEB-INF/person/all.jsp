@@ -42,7 +42,9 @@
         </label>
     </form>
 </div>
-<br>
+<p style="text-align:justify"><a href="/personDetails/add">Dodawanie nowego pacjenta</a></p>
+<p style="text-align:justify"><a href="/personDetails/all">Lista wszystkich pacjentów</a></p>
+
 <table border="1" width="100%">
     <tr>
         <td>Imię:</td>
@@ -88,8 +90,5 @@
         </tr>
     </c:forEach>
 </table>
-
-<br>
-<a href="/personDetails/add">Dodawanie nowego pacjenta</a>
 </body>
 </html>

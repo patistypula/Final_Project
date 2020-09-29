@@ -40,7 +40,8 @@ public class AdditionalAddController {
     }
 
     @PostMapping("/add/{id}")
-    public String saveAdditional(@Valid Additional additional, BindingResult result) {
+    public String saveAdditional(@Valid @ModelAttribute ("additionals") Additional additional,
+                                 BindingResult result) {
         if(result.hasErrors()) {
             return "additional/form";
         }

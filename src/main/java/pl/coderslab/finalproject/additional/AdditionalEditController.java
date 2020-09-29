@@ -37,7 +37,8 @@ public class AdditionalEditController {
     }
 
     @PostMapping("/edit/{id}")   // tu jest id pomiaru
-    public String saveEditedAddition(@PathVariable long id, @Valid Additional additional, BindingResult result) {
+    public String saveEditedAddition(@PathVariable long id, @Valid @ModelAttribute ("additionals")
+            Additional additional, BindingResult result) {
         if(result.hasErrors()) {
             return "additional/form";
         }

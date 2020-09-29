@@ -28,8 +28,9 @@
     Nazwisko: <form:input path="lastName"/><br>
 
     <form:errors path="gender" cssClass="error"/><br>
+    Kobieta: <form:radiobutton path="gender" value="F"/>
     Mężczyzna: <form:radiobutton path="gender" value="M"/><br>
-    Kobieta: <form:radiobutton path="gender" value="F"/><br>
+
 
     <form:errors path="yearOfBirth" cssClass="error"/><br>
     Data urodzenia: <form:input path="yearOfBirth"/><br>

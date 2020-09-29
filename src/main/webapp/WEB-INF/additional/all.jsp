@@ -29,6 +29,8 @@
 </head>
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
+<a href="/personDetails/all">Lista pacjentów</a><br>
+<br>
 RH - Right Hand <br>
 LH - Left Hand <br>
 RL - Right Leg <br>
@@ -85,9 +87,5 @@ LL - Left Leg <br>
         </tr>
     </c:forEach>
 </table>
-
-<br>
-<a href="/personDetails/all">Lista pacjentów</a>
-
 </body>
 </html>
