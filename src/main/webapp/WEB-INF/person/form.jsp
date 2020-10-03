@@ -22,24 +22,22 @@
 <form:form method="post" modelAttribute="persons">
     <form:hidden path="id"/>
     <form:errors path="firstName" cssClass="error"/><br>
-    Imię: <form:input path="firstName"/><br>
+    Imię <form:input path="firstName"/><br>
 
     <form:errors path="lastName" cssClass="error"/><br>
-    Nazwisko: <form:input path="lastName"/><br>
+    Nazwisko <form:input path="lastName"/><br>
 
     <form:errors path="gender" cssClass="error"/><br>
-    Kobieta: <form:radiobutton path="gender" value="F"/>
-    Mężczyzna: <form:radiobutton path="gender" value="M"/><br>
-
+    Kobieta <form:radiobutton path="gender" value="F"/><br>
+    Mężczyzna <form:radiobutton path="gender" value="M"/><br>
 
     <form:errors path="yearOfBirth" cssClass="error"/><br>
-    Data urodzenia: <form:input path="yearOfBirth"/><br>
+    Data urodzenia (dd.mm.yyyy) <form:input path="yearOfBirth"/><br>
 
     <form:errors path="height" cssClass="error"/><br>
-    Wzrost: <form:input path="height"/> cm <br>
+    Wzrost <form:input path="height"/> cm<br>
     <br>
     <input type="submit" value="Zapisz"/>
 </form:form>
-<br>
 </body>
 </html>

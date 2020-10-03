@@ -36,12 +36,12 @@ public class DietPlan {
 
     @PrePersist
     public void perPersist() {
-        created = LocalDateTime.now();
+        created = LocalDateTime.now().withNano(0);
     }
 
     @PreUpdate
     public void perUpdate() {
-        updated = LocalDateTime.now();
+        updated = LocalDateTime.now().withNano(0);
     }
 
 }

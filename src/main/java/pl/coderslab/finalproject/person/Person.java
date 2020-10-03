@@ -37,6 +37,7 @@ public class Person {
     @NotBlank(message = "Proszę podać płeć pacjenta")
     private String gender;  // F or M
 
+
     private Integer height; //cm
 
     @DateTimeFormat(pattern = "dd.MM.yyyy")
