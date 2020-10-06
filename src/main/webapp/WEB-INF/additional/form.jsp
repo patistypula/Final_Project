@@ -14,6 +14,18 @@
         .error {
             color:red;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -23,6 +35,17 @@ LH - Left Hand<br>
 RL - Right Leg<br>
 LL - Left Leg<br>
 <br>
+
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
 <form:form method="post" modelAttribute="additionals">
     <form:hidden path="id"/>
     <form:hidden path="person"/>
@@ -51,12 +74,13 @@ LL - Left Leg<br>
         <td><form:input path="leftLegMuscle"/></td>
         <td><form:input path="bodyMuscle"/></td>
     </tr>
-</table><br>
-    <input type="submit" value="Zapisz"/>
+</table>
+    <br>
+    <button  class="button">Zapisz</button>
 </form:form>
+    </tr>
+</table>
 
-<br>
-<a href="/personDetails/all">Lista pacjentów</a>
 
 </body>
 </html>

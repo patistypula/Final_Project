@@ -14,10 +14,33 @@
         .error {
             color:red;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <h2><center>DODAWANIE NOWEGO PLANU DIETY</center></h2>
+
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
 <table border="1" width="100%">
     <form:form method="post" modelAttribute="diets">
         <form:hidden path="id"/>
@@ -41,13 +64,12 @@
                 <td><form:textarea rows="6" cols="24" path="saturday"/></td>
                 <td><form:textarea rows="6" cols="24" path="sunday"/></td>
             </tr>
-        </table><br>
-        <input type="submit" value="Zapisz"/>
+        </table>
     </form:form>
-
 </table>
-
-<br>
-<a href="/personDetails/all">Lista pacjentów</a>
+        <br>
+        <button  class="button">Zapisz</button>
+    </tr>
+</table>
 </body>
 </html>

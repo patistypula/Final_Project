@@ -14,11 +14,32 @@
         .error {
             color:red;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <h2><center>FORMULARZ DODAWANIA NOWEGO PACJENTA</center></h2>
-<left><a href="/personDetails/all">Lista pacjentów</a></left>
+
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
 <form:form method="post" modelAttribute="persons">
     <form:hidden path="id"/>
     <form:errors path="firstName" cssClass="error"/><br>
@@ -37,7 +58,10 @@
     <form:errors path="height" cssClass="error"/><br>
     Wzrost <form:input path="height"/> cm<br>
     <br>
-    <input type="submit" value="Zapisz"/>
+    <button  class="button">Zapisz</button>
 </form:form>
+    </tr>
+</table>
+
 </body>
 </html>

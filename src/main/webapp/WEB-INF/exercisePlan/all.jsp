@@ -25,12 +25,32 @@
         tr:nth-child(odd) {
             background-color: #fff;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <h2><center>HISTORIA PLANÓW TRENINGOWYCH</center></h2>
-<a href="/personDetails/all">Lista pacjentów</a><br>
-<br>
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
 <table border="1" width="100%">
     <tr>
         <td>Data</td>
@@ -56,10 +76,14 @@
             <td>${exercise.saturday}</td>
             <td>${exercise.sunday}</td>
             <td>
-                <a href="/exercise/edit/${exercise.id}">Edytuj</a>
+                <a href="/exercise/edit/${exercise.id}">
+                    <button class="button">Edytuj</button>
+                </a>
             </td>
         </tr>
     </c:forEach>
+</table>
+    </tr>
 </table>
 </body>
 </html>

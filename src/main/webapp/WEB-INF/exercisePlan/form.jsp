@@ -14,10 +14,33 @@
         .error {
             color:red;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <h2><center>FORMULARZ DODAWANIA NOWEGO PLANU TRENINGOWEGO</center></h2>
+
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
 <form:form method="post" modelAttribute="exercises">
     <form:hidden path="id"/>
     <form:hidden path="person"/>
@@ -41,11 +64,11 @@
             <td><form:textarea rows="6" cols="24" path="sunday"/></td>
         </tr>
     </table><br>
-    <input type="submit" value="Zapisz"/>
 </form:form>
-
+</table>
 <br>
-<a href="/personDetails/all">Lista pacjentów</a>
-
+<button  class="button">Zapisz</button>
+</tr>
+</table>
 </body>
 </html>

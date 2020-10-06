@@ -25,17 +25,50 @@
         tr:nth-child(odd) {
             background-color: #fff;
         }
+        .button {
+            display: block;
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
-<a href="/personDetails/all">Lista pacjentów</a><br>
-<br>
-RH - Right Hand <br>
-LH - Left Hand <br>
-RL - Right Leg <br>
-LL - Left Leg <br>
-<br>
+
+<table>
+    <tr>
+        <a href="/personDetails/all">
+            <button class="button">Lista wszystkich pacjentów</button>
+        </a>
+        <br>
+        <br>
+    </tr>
+    <tr></tr>
+    <tr>
+        RH - Right Hand
+        <br>
+    </tr>
+    <tr>
+        LH - Left Hand
+        <br>
+    </tr>
+    <tr>
+        RL - Right Leg
+        <br>
+    </tr>
+    <tr>
+        LL - Left Leg
+        <br>
+    </tr>
+    <br>
+    <tr>
 <table border="1" width="100%">
     <tr>
         <td>Data</td>
@@ -82,10 +115,15 @@ LL - Left Leg <br>
             <td><center>${additional.bodyFat}</center></td>
             <td><center>${additional.bodyMuscle}</center></td>
             <td>
-                <a href="/additional/edit/${additional.id}">Edytuj</a>
+                <a href="/additional/edit/${additional.id}">
+                    <button class="button">Edytuj</button>
+                </a>
             </td>
         </tr>
     </c:forEach>
 </table>
+    </tr>
+</table>
+
 </body>
 </html>

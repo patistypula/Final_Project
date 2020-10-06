@@ -1,17 +1,16 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: patis
-  Date: 06.09.2020
-  Time: 14:37
+  Date: 06.10.2020
+  Time: 19:09
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Strona główna</title>
-    <style>
-        .button {
+    <title>Landing Page</title>
+<style>
+    .button {
         display: block;
         background-color: #4169E1;
         border: none;
@@ -23,23 +22,16 @@
         font-size: 14px;
         border-radius: 8px;
     }
-    </style>
+</style>
 </head>
 <body>
-<h1><center>WITAMY NA STRONIE GŁÓWNEJ</center></h1>
+<center><h1>WITAMY NA STRONIE GŁÓWNEJ</h1></center>
+<br>
 <br>
 <center>
-    <a href="/personDetails/add">
-    <button class="button">Dodawanie nowego pacjenta</button>
-</a>
-</center>
-<br>
-<br>
-
-<center>
-    <a href="/personDetails/all">
-    <button class="button">Lista wszystkich pacjentów</button>
-</a>
+    <a href="/login">
+        <button class="button">Zaloguj się</button>
+    </a>
 </center>
 
 </body>
