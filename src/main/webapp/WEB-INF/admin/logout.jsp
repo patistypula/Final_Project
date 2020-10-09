@@ -13,11 +13,18 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<center><h3>Czy na pewno chcesz się wylogować?</h3></center>
 
 <form action="<c:url value="/logout"/>" method="post">
-    <center><input class="fa fa-id-badge" type="submit" value="Wyloguj"></center>
+    <center><input class="button1" type="submit" value="Wyloguj"></center>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
+<br>
+<center>
+    <a href="/personDetails/all">
+        <button class="button1">Anuluj</button>
+    </a>
+</center>
 
 </body>
 </html>

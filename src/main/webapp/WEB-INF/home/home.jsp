@@ -13,7 +13,7 @@
 
 </head>
 <body background="/images/dietetyka.jpg">
-<h1><center>WITAMY NA STRONIE GŁÓWNEJ</center></h1>
+<h1><center>BAZA PACJENTÓW</center></h1>
 <br>
 <center>
     <a href="/personDetails/add">

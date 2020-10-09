@@ -17,7 +17,7 @@
 <form method="post" action="/login">
     <center><div><label> Login : <input type="text" name="username"/> </label></div></center><br>
     <center><div><label> Hasło: <input type="password" name="password"/> </label></div></center><br>
-    <center><div><input type="submit" value="Zaloguj się"/></div></center>
+    <center><div><input class="button1" type="submit" value="Zaloguj się"/></div></center>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 </body>

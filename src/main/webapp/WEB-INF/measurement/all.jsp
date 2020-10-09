@@ -21,7 +21,7 @@
 <table>
     <tr>
         <a href="/personDetails/all">
-            <button class="button">Lista wszystkich pacjentów</button>
+            <button class="button1">Lista wszystkich pacjentów</button>
         </a>
         <br>
         <br>
