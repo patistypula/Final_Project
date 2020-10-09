@@ -1,0 +1,49 @@
+.button1 {
+    display: block;
+    background-color: #4169E1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.button2 {
+    display: block;
+    background-color: #D3D3D3;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+error {
+    color:red;
+}
+
+table {
+    border-collapse: collapse;
+}
+th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #eee;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
+}

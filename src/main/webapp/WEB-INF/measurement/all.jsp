@@ -12,35 +12,9 @@
 <html>
 <head>
     <title>Historia pomiarów</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        tr:nth-child(even) {
-            background-color: #eee;
-        }
-        tr:nth-child(odd) {
-            background-color: #fff;
-        }
-        .button {
-            display: block;
-            background-color: #4169E1;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 <h2><center>HISTORIA POMIARÓW</center></h2>
 
@@ -54,7 +28,7 @@
     </tr>
     <tr></tr>
     <tr>
-<table border="1" width="100%">
+    <table border="1" width="100%">
     <tr>
         <td>Data</td>
         <td>Data modyfikacji</td>
@@ -101,12 +75,12 @@
             <td><center>${measurement.basalMetabolicRate}</center></td>
             <td>
                 <a href="/measurement/edit/${measurement.id}">
-                    <button class="button">Edytuj</button>
+                    <button class="button1">Edytuj</button>
                 </a>
             </td>
-        </tr>
-    </c:forEach>
-</table>
+            </tr>
+        </c:forEach>
+    </table>
     </tr>
 </table>
 </body>

@@ -1,4 +1,3 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: patis
@@ -10,27 +9,15 @@
 <html>
 <head>
     <title>Strona główna</title>
-    <style>
-        .button {
-        display: block;
-        background-color: #4169E1;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
+
 </head>
-<body>
+<body background="/images/dietetyka.jpg">
 <h1><center>WITAMY NA STRONIE GŁÓWNEJ</center></h1>
 <br>
 <center>
     <a href="/personDetails/add">
-    <button class="button">Dodawanie nowego pacjenta</button>
+    <button class="button1">Dodawanie nowego pacjenta</button>
 </a>
 </center>
 <br>
@@ -38,7 +25,7 @@
 
 <center>
     <a href="/personDetails/all">
-    <button class="button">Lista wszystkich pacjentów</button>
+    <button class="button1">Lista wszystkich pacjentów</button>
 </a>
 </center>
 

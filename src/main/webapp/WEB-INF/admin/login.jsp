@@ -9,27 +9,15 @@
 <html>
 <head>
     <title>Logowanie</title>
-    <style>
-        .button {
-            display: block;
-            background-color: #4169E1;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+
+<body background="images/dietetyka.jpg">
 <center><h2>Logowanie się</h2></center>
 <form method="post" action="/login">
-    <div><label> Login : <input type="text" name="username"/> </label></div>
-    <div><label> Hasło: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Zaloguj się"/></div>
+    <center><div><label> Login : <input type="text" name="username"/> </label></div></center><br>
+    <center><div><label> Hasło: <input type="password" name="password"/> </label></div></center><br>
+    <center><div><input type="submit" value="Zaloguj się"/></div></center>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 </body>

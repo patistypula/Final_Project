@@ -10,11 +10,12 @@
 <html>
 <head>
     <title>Wylogowanie</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
 <form action="<c:url value="/logout"/>" method="post">
-    <input class="fa fa-id-badge" type="submit" value="Wyloguj">
+    <center><input class="fa fa-id-badge" type="submit" value="Wyloguj"></center>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 </form>
 

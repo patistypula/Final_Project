@@ -9,30 +9,18 @@
 <html>
 <head>
     <title>Landing Page</title>
-<style>
-    .button {
-        display: block;
-        background-color: #4169E1;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        border-radius: 8px;
-    }
-</style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+
+<body background="images/dietetyka.jpg">
 <center><h1>WITAMY NA STRONIE GŁÓWNEJ</h1></center>
 <br>
 <br>
 <center>
     <a href="/login">
-        <button class="button">Zaloguj się</button>
+        <button class="button1">Zaloguj się</button>
     </a>
 </center>
-
 </body>
+
 </html>

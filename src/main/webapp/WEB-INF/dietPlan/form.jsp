@@ -10,23 +10,7 @@
 <html>
 <head>
     <title>Formularz dodawania nowego planu diety</title>
-    <style>
-        .error {
-            color:red;
-        }
-        .button {
-            display: block;
-            background-color: #4169E1;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <h2><center>DODAWANIE NOWEGO PLANU DIETY</center></h2>
@@ -34,42 +18,41 @@
 <table>
     <tr>
         <a href="/personDetails/all">
-            <button class="button">Lista wszystkich pacjentów</button>
+            <button class="button1">Lista wszystkich pacjentów</button>
         </a>
         <br>
         <br>
     </tr>
     <tr></tr>
     <tr>
-<table border="1" width="100%">
-    <form:form method="post" modelAttribute="diets">
-        <form:hidden path="id"/>
-        <form:hidden path="person"/>
         <table border="1" width="100%">
-            <tr>
-                <td><center>PONIEDZIAŁEK</center></td>
-                <td><center>WTOREK</center></td>
-                <td><center>ŚRODA</center></td>
-                <td><center>CZWARTEK</center></td>
-                <td><center>PIĄTEK</center></td>
-                <td><center>SOBOTA</center></td>
-                <td><center>NIEDZIELA</center></td>
-            </tr>
-            <tr>
-                <td><form:textarea rows="6" cols="24" path="monday"/></td>
-                <td><form:textarea rows="6" cols="24" path="tuesday"/></td>
-                <td><form:textarea rows="6" cols="24" path="wednesday"/></td>
-                <td><form:textarea rows="6" cols="24" path="thursday"/></td>
-                <td><form:textarea rows="6" cols="24" path="friday"/></td>
-                <td><form:textarea rows="6" cols="24" path="saturday"/></td>
-                <td><form:textarea rows="6" cols="24" path="sunday"/></td>
-            </tr>
+            <form:form method="post" modelAttribute="diets">
+            <form:hidden path="id"/>
+            <form:hidden path="person"/>
+                <table border="1" width="100%">
+                <tr>
+                    <td><center>PONIEDZIAŁEK</center></td>
+                    <td><center>WTOREK</center></td>
+                    <td><center>ŚRODA</center></td>
+                    <td><center>CZWARTEK</center></td>
+                    <td><center>PIĄTEK</center></td>
+                    <td><center>SOBOTA</center></td>
+                    <td><center>NIEDZIELA</center></td>
+                </tr>
+                <tr>
+                    <td><form:textarea rows="6" cols="21" path="monday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="tuesday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="wednesday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="thursday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="friday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="saturday"/></td>
+                    <td><form:textarea rows="6" cols="21" path="sunday"/></td>
+                </tr>
+                </table>
+            <br>
+            <button class="button1">Zapisz</button>
+            </form:form>
         </table>
-    </form:form>
-</table>
-        <br>
-        <button  class="button">Zapisz</button>
-    </tr>
 </table>
 </body>
 </html>
