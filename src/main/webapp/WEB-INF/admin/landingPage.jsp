@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body background="images/dietetyka.jpg">
+<body background="/images/dietetyka.jpg">
 <center><h1>WITAMY NA STRONIE GŁÓWNEJ</h1></center>
 <br>
 <br>

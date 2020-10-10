@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body background="images/dietetyka.jpg">
+<body background="/images/dietetyka.jpg">
 <center><h2>Logowanie się</h2></center>
 <form method="post" action="/login">
     <center><div><label> Login : <input type="text" name="username"/> </label></div></center><br>
